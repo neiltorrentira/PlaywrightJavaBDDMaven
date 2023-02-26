@@ -5,4 +5,4 @@ Feature: Tests 002 - Browse Google
   Scenario: Tests 002 Google scenario
     Given users inputs "John Cena" search text
     Then users validates "John Cena" search text is present
-    #And users clicks Images, News, Videos, and Shopping links
+    And users clicks Images, News, Videos, and Shopping links

@@ -3,10 +3,7 @@ package webui.playwright.Factory;
 import com.microsoft.playwright.*;
 import java.awt.*;
 import java.util.Objects;
-
-import webui.playwright.Utils.Constants;
-
-import static webui.playwright.Utils.Constants.GOOGLE_URL;
+import static webui.playwright.Utils.Constants.*;
 
 
 public class PlaywrightFactory {
@@ -80,18 +77,17 @@ public class PlaywrightFactory {
         browserContext.set(getBrowser().newContext(new Browser.NewContextOptions()
                 .setViewportSize((int)width, (int)height)));
         page.set(getBrowserContext().newPage());
-        //getPage().navigate("http://google.com");
 
         return playwright;
     }
 
     public void opensHomePage(String website)throws IllegalStateException{
-        switch (website) {
+        switch (website.trim()) {
             case GOOGLE_URL:
                 getPage().navigate(GOOGLE_URL);
                 break;
-            case Constants.FACEBOOK_URL:
-                getPage().navigate(Constants.FACEBOOK_URL);
+            case FACEBOOK_URL:
+                getPage().navigate(FACEBOOK_URL);
                 break;
             default:
                 throw new IllegalStateException("Unexpected value: " + website);
