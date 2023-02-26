@@ -3,6 +3,7 @@ package TestNGPOM;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import webui.playwright.Utils.Constants;
+import webui.playwright.Utils.Utils;
 
 public class LoginPageTest extends BaseTest{
     @Test(priority = 1)
@@ -20,7 +21,8 @@ public class LoginPageTest extends BaseTest{
 
     @Test(priority = 3)
     public void appLoginTest() {
-        Assert.assertTrue(loginPage.doLogin(prop.getProperty("username").trim(), prop.getProperty("password").trim()));
+        Assert.assertTrue(loginPage.doLogin(prop.getProperty("username").trim(),
+                Utils.decode64(prop.getProperty("password").trim())));
     }
 
 }

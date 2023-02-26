@@ -132,6 +132,7 @@ public class PlaywrightFactory {
                         .setHeadless(false)));
                 break;
             case "edge":
+            case "msedge":
                 browser.set(getPlaywright().chromium().launch
                         (new BrowserType.LaunchOptions().setChannel("msedge")
                         .setHeadless(false)));
