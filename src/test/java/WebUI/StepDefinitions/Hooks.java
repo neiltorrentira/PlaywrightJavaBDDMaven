@@ -15,7 +15,7 @@ public class Hooks extends PlaywrightCucumber {
                 + (scenario.isFailed() ? "failed" : "passed"));
         getPage().close();
         getBrowserContext().close();
-        getBrowser().close();
+        //getBrowser().close();
         getPlaywright().close();
     }
 }

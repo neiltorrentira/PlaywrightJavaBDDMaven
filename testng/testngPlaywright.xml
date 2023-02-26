@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Playwright Cucumber Test Suite" verbose="1"
-       thread-count="4" parallel="tests">
+       thread-count="8" parallel="tests">
 
     <test name="PlaywrightTest-Cucumber-Chrome" parallel="classes">
         <parameter name="browser" value="Chrome"/>
