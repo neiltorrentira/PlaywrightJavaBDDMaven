@@ -7,16 +7,22 @@
         <parameter name="browser" value="Chrome"/>
         <classes>
             <class name="WebUI.Runners.PlaywrightCucumber"/>
-            <!--<class name="WebUI.Runners.CucumberPlaywright"/>-->
         </classes>
     </test>
 
-    <test name="PlaywrightTest-Cucumber-Firefox" parallel="classes">
-        <parameter name="browser" value="Firefox"/>
+    <test name="PlaywrightTest-Cucumber-Chromium" parallel="classes">
+        <parameter name="browser" value="Chromium"/>
         <classes>
             <class name="WebUI.Runners.CucumberPlaywright"/>
         </classes>
     </test>
+
+    <!--<test name="PlaywrightTest-Cucumber-Firefox" parallel="classes">
+        <parameter name="browser" value="Firefox"/>
+        <classes>
+            <class name="WebUI.Runners.CucumberPlaywright"/>
+        </classes>
+    </test>-->
 
     <!--<test name="PlaywrightTest-Cucumber-MSEdge" parallel="classes">
         <parameter name="browser" value="Edge"/>
