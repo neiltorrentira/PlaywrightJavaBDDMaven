@@ -11,11 +11,18 @@
         </classes>
     </test>
 
-    <test name="PlaywrightTest-Cucumber-MSEdge" parallel="classes">
-        <parameter name="browser" value="Edge"/>
+    <test name="PlaywrightTest-Cucumber-Firefox" parallel="classes">
+        <parameter name="browser" value="Firefox"/>
         <classes>
             <class name="WebUI.Runners.CucumberPlaywright"/>
         </classes>
     </test>
+
+    <!--<test name="PlaywrightTest-Cucumber-MSEdge" parallel="classes">
+        <parameter name="browser" value="Edge"/>
+        <classes>
+            <class name="WebUI.Runners.CucumberPlaywright"/>
+        </classes>
+    </test>-->
 
 </suite>

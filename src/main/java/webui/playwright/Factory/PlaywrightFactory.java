@@ -5,7 +5,6 @@ import java.awt.*;
 import java.util.Objects;
 import static webui.playwright.Utils.Constants.*;
 
-
 public class PlaywrightFactory {
     Dimension screenSize;
     public String browserName;
